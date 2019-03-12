@@ -61,11 +61,11 @@ exprxnv=push!(exprxnv,"C00122 -> ")
 exprxnv=push!(exprxnv,"C00086 -> ")
 
 #adding on ex rxn to balance elements, Added after running the first tome
-#needed a ATP bidirectional rxn to ADP assume this is an exchange required
-#to produce energy in the system and a H20 export rxn
+#needed an ATP exchange rxn and an ADP exchange rxn to have a full elemental balance
+#assume this is an exchange required and a H20 export rxn. the none exchange rxns were already balenced
 exprxnv=push!(exprxnv,"C00001 -> ")
-exprxnv=push!(exprxnv,"C00002 <=> C00008")
-
+exprxnv=push!(exprxnv,"C00002 -> ")
+exprxnv=push!(exprxnv," -> C00008")
 
 chemicals_raw=[]
 for i in 1:length(exprxnv)#length(rxns) #column i of matrix
